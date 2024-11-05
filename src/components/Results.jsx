@@ -1,13 +1,13 @@
 import { calculateInvestmentResults, formatter } from '../util/investment.js';
 
 
+
 export default function Results({ input }) {
   const results = [];
   calculateInvestmentResults(input, results);
+
   if (results.length === 0) {
-    return (
-      <p className='center'>Invalid input. Please enter a Duration greater than 0</p>
-    )
+    return <p className="center">Invalid input. Please enter a Duration greater than 0</p>
   }
 
   const initialInvestment =
